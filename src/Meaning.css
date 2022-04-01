@@ -1,0 +1,9 @@
+.Meaning .definition {
+  color: blue;
+}
+
+.Meaning .example {
+  font-style: italic;
+  color: #70757a;
+  margin-top: 10px;
+}
