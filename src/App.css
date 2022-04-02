@@ -2,8 +2,9 @@ body {
   background: #f9f8fe;
 }
 
-a {
-  color: #9670f4;
+.App a {
+  text-decoration: none;
+  color: #ff9800;
 }
 
 .App {
@@ -16,9 +17,9 @@ a {
 }
 
 .App-logo {
-  max-width: 200px;
+  max-width: 450px;
   display: block;
-  margin: 0 auto;
+  margin: 100px auto 50px;
 }
 
 .App-footer {

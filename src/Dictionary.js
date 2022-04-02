@@ -4,10 +4,9 @@ import Results from "./Results";
 import Photos from "./Photos";
 import "./Dictionary.css";
 
-export default function Dictionary(props) {
+export default function Dictionary() {
   let [keyword, setKeyword] = useState("");
   let [results, setResults] = useState(null);
-  let [loaded, setLoaded] = useState(false);
   let [photos, setPhotos] = useState(null);
 
   function handleDictionaryResponse(response) {
@@ -18,7 +17,9 @@ export default function Dictionary(props) {
     setPhotos(response.data.photos);
   }
 
-  function search() {
+  function search(event) {
+    event.preventDefault();
+
     //documentation: https://dictionaryapi.dev/
     let apiUrl = `https://api.dictionaryapi.dev/api/v2/entries/en/${keyword}`;
 
@@ -31,41 +32,39 @@ export default function Dictionary(props) {
     axios.get(pexelsApiUrl, { headers: headers }).then(handlePexelsResponse);
   }
 
-  function handleSubmit(event) {
-    event.preventDefault();
-    search();
-  }
-
   function handleKeywordChange(event) {
     setKeyword(event.target.value);
   }
 
-  function load() {
-    setLoaded(true);
-    search();
-  }
-
-  if (loaded) {
-    return (
-      <div className="Dictionary">
-        <section>
-          <h1>What word do you want to look up?</h1>
-          <form onSubmit={handleSubmit}>
-            <input
-              type="search"
-              onChange={handleKeywordChange}
-              className="form-control"
-              placeholder="search"
-            />
-          </form>
-          <div className="hint">Sugested words: code, sunset, yoga...</div>
-        </section>
-        <Results results={results} />
-        <Photos photos={photos} />
-      </div>
-    );
-  } else {
-    load();
-    return "Loading";
-  }
+  return (
+    <div className="Dictionary">
+      <section>
+        <h1>What word do you want to look up?</h1>
+        <form onSubmit={search}>
+          <div className="d-flex">
+            <div className="flex-grow-1">
+              <input
+                type="search"
+                onChange={handleKeywordChange}
+                className="form-control"
+                placeholder="Search"
+              />
+            </div>
+            <div className="mx-1">
+              <button
+                value="Search"
+                className="btn mx-1 px-4  text-center"
+                type="submit"
+              >
+                Search
+              </button>
+            </div>
+          </div>
+        </form>
+        <div className="hint">Sugested words: code, sunset, yoga...</div>
+      </section>
+      <Results results={results} />
+      <Photos photos={photos} />
+    </div>
+  );
 }

@@ -1,4 +1,4 @@
-import logo from "./logo-shecodes.png";
+import logo from "./TG-logo.png";
 import "./App.css";
 import Dictionary from "./Dictionary";
 
@@ -13,7 +13,24 @@ export default function App() {
           <Dictionary />
         </main>
         <footer className="App-footer">
-          <small>Coded by SheCodes</small>
+          <small>
+            This project was coded by {""}
+            <a
+              href="https://www.linkedin.com/in/tamirha/"
+              target="_blank"
+              rel="noreferrer"
+            >
+              Tamirha Giraldo
+            </a>
+            , and it is{" "}
+            <a
+              href="https://github.com/TamirhaG/dictionary-project"
+              target="_blank"
+              rel="noreferrer"
+            >
+              opened sourced
+            </a>
+          </small>
         </footer>
       </div>
     </div>
