@@ -1,10 +1,16 @@
 body {
-  background: #f9f8fe;
+  background: rgb(200, 255, 228);
+  background: radial-gradient(
+    circle,
+    rgba(200, 255, 228, 1) 0%,
+    rgba(181, 255, 219, 1) 100%
+  );
 }
 
 .App a {
   text-decoration: none;
   color: #ff9800;
+  font-weight: bold;
 }
 
 .App {
@@ -17,9 +23,9 @@ body {
 }
 
 .App-logo {
-  max-width: 450px;
+  max-width: 600px;
   display: block;
-  margin: 100px auto 50px;
+  margin: 100px auto 10px;
 }
 
 .App-footer {

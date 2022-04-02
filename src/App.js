@@ -28,7 +28,16 @@ export default function App() {
               target="_blank"
               rel="noreferrer"
             >
-              opened sourced
+              opened sourced on GitHub
+            </a>{" "}
+            and
+            <a
+              href="https://visionary-marshmallow-fe6d36.netlify.app/"
+              target="_blank"
+              rel="noreferrer"
+            >
+              {" "}
+              hosted on Netlify
             </a>
           </small>
         </footer>
