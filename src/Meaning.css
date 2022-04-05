@@ -1,12 +1,7 @@
 .Meaning h3 {
   color: black;
   font-weight: bold;
-  background: rgb(195, 255, 226);
-  background: radial-gradient(
-    circle,
-    rgba(195, 255, 226, 1) 0%,
-    rgba(181, 255, 219, 1) 100%
-  );
+  background: #dcfaff;
   padding: 5px 40px 10px 30px;
   border-radius: 30px;
   margin-bottom: 20px;
