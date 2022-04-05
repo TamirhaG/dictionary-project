@@ -23,7 +23,7 @@ body {
 }
 
 .App-logo {
-  max-width: 600px;
+  max-width: 100%;
   display: block;
   margin: 100px auto 10px;
 }
